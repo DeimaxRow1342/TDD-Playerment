@@ -5,9 +5,12 @@ describe("Determinar el precio total", () => {
         expect(calculadora(2, 100)).toEqual(200);
     });
     it("Si ingreso UT, me debe devolver el precio con el impuesto", () => {
-        expect(calculadora(2, 100, "UT")).toEqual(213);
+        expect(calculadora(2, 100, "UT")).toEqual(213.3);
     });
     it("Si ingreso NV, me debe devolver el precio con el impuesto", () => {
         expect(calculadora(2, 100, "NV")).toEqual(216);
+    });
+    it("Si ingreso TX, me debe devolver el precio con el impuesto", () => {
+        expect(calculadora(2, 100, "TX")).toEqual(212.5);
     });
 });
