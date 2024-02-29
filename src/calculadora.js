@@ -1,5 +1,6 @@
 function calculadora(cantidad, precio, estado){
     let precioneto=cantidad * precio;
+
     if(estado=="UT")
     {
         return precioneto*0.0665 + precioneto;
@@ -12,6 +13,11 @@ function calculadora(cantidad, precio, estado){
     {
         return precioneto*0.0625 + precioneto;
     }
+    if(estado=="AL")
+    {
+        return precioneto*0.04 + precioneto;
+    }
+    
     return precioneto;
 };
 
