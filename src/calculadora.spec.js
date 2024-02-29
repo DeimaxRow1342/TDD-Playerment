@@ -19,4 +19,7 @@ describe("Determinar el precio total", () => {
     it("Si ingreso AL, me debe devolver el precio con el impuesto", () => {
         expect(calculadora(2, 100, "CA")).toEqual(216.5);
     });
+    /*it("Si el total del precio es igual o mayor a 1000, me debe devolver el precio con un descuento del 3%", () => {
+        expect(calculadora(2, 100, "CA")).toEqual(216.5);
+    });*/
 });

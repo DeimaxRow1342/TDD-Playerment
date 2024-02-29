@@ -1,8 +1,9 @@
-import sumar from "./sumador";
+import calculadora from "./calculadora.js";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const first = document.querySelector("#cantidad");
+const second = document.querySelector("#precio");
+const third = document.querySelector("#estado");
+const form = document.querySelector("#calcular-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
@@ -10,6 +11,7 @@ form.addEventListener("submit", (event) => {
 
   const firstNumber = Number.parseInt(first.value);
   const secondNumber = Number.parseInt(second.value);
+  const thirdText = third.value;
 
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  div.innerHTML = "<p>" + calculadora(firstNumber, secondNumber, thirdText) + "</p>";
 });
