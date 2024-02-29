@@ -4,6 +4,10 @@ function calculadora(cantidad, precio, estado){
     {
         return precioneto*0.065 + precioneto;
     }
+    if(estado=="NV")
+    {
+        return precioneto*0.08 + precioneto;
+    }
     return precioneto;
 };
 
