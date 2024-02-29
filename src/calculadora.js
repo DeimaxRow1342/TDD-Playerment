@@ -17,7 +17,10 @@ function calculadora(cantidad, precio, estado){
     {
         return precioneto*0.04 + precioneto;
     }
-    
+    if(estado=="CA")
+    {
+        return precioneto*0.0825 + precioneto;
+    }
     return precioneto;
 };
 

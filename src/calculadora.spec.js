@@ -16,4 +16,7 @@ describe("Determinar el precio total", () => {
     it("Si ingreso AL, me debe devolver el precio con el impuesto", () => {
         expect(calculadora(2, 100, "AL")).toEqual(208);
     });
+    it("Si ingreso AL, me debe devolver el precio con el impuesto", () => {
+        expect(calculadora(2, 100, "CA")).toEqual(216.5);
+    });
 });
