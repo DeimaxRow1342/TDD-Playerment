@@ -13,5 +13,5 @@ form.addEventListener("submit", (event) => {
   const secondNumber = Number.parseInt(second.value);
   const thirdText = third.value;
 
-  div.innerHTML = "<p>" + calculadora(firstNumber, secondNumber, thirdText) + "</p>";
+  div.innerHTML = "<p> Bs. " + calculadora(firstNumber, secondNumber, thirdText) + "</p>";
 });
