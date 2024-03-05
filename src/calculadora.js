@@ -1,25 +1,30 @@
 function calculadora(cantidad, precio, estado){
     let precioneto=cantidad * precio;
-
+    
     if(estado=="UT")
     {
-        return precioneto*0.0665 + precioneto;
+        precioneto=precioneto*0.0665 + precioneto;
     }
     if(estado=="NV")
     {
-        return precioneto*0.08 + precioneto;
+        precioneto=precioneto*0.08 + precioneto;
     }
     if(estado=="TX")
     {
-        return precioneto*0.0625 + precioneto;
+        precioneto= precioneto*0.0625 + precioneto;
     }
     if(estado=="AL")
     {
-        return precioneto*0.04 + precioneto;
+        precioneto= precioneto*0.04 + precioneto;
     }
     if(estado=="CA")
     {
-        return precioneto*0.0825 + precioneto;
+        precioneto= precioneto*0.0825 + precioneto;
+    }
+
+    if(precioneto>1000)
+    {
+        precioneto= precioneto-precioneto*0.03;
     }
     return precioneto;
 };

@@ -19,7 +19,7 @@ describe("Determinar el precio total", () => {
     it("Si ingreso AL, me debe devolver el precio con el impuesto", () => {
         expect(calculadora(2, 100, "CA")).toEqual(216.5);
     });
-    /*it("Si el total del precio es igual o mayor a 1000, me debe devolver el precio con un descuento del 3%", () => {
-        expect(calculadora(2, 100, "CA")).toEqual(216.5);
-    });*/
+    it("Si ingresa una sumatoria mas de precio de 1000$, tendra un 3% de descuento", () => {
+        expect(calculadora(2, 1000, "CA")).toEqual(2100.05);
+    });
 });
