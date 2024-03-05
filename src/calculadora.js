@@ -1,51 +1,11 @@
+import descontar from "./descuento.js";
+import impuesto from "./impuesto.js";
+
 function calculadora(cantidad, precio, estado){
-    let precioneto=cantidad * precio, descuento=0, impuesto=0;
-    
-    if(estado=="UT")
-    {
-        impuesto = precioneto*0.0665;
-    }
-    else if(estado=="NV")
-    {
-        impuesto = precioneto*0.08;
-    }
-    else if(estado=="TX")
-    {
-        impuesto = precioneto*0.0625;
-    }
-    else if(estado=="AL")
-    {
-        impuesto = precioneto*0.04;
-    }
-    else if(estado=="CA")
-    {
-        impuesto = precioneto*0.0825;
-    }
-
-    if(precioneto>=1000 && precioneto<3000)
-    {
-        descuento = precioneto*0.03;
-    }
-    else if(precioneto>=3000 && precioneto<7000)
-    {
-        descuento = precioneto*0.05;
-    }
-    else if(precioneto>=7000 && precioneto<10000)
-    {
-        descuento = precioneto*0.07;
-    }
-    else if(precioneto>=10000 && precioneto<30000)
-    {
-        descuento = precioneto*0.1;
-    }else if(precioneto>=30000 )
-    {
-        descuento = precioneto*0.15;
-    }
-
-    return precioneto-descuento+impuesto;
-};
-
-
-    
-
+    let precioneto, desc, imp;
+    precioneto = cantidad * precio
+    desc = descontar(precioneto) * precioneto;
+    imp = impuesto(estado) * precioneto;
+    return precioneto - desc + imp;
+};  
 export default calculadora;
