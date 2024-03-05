@@ -34,4 +34,7 @@ describe("Determinar el precio total", () => {
     it("Si ingresa una sumatoria de precio mayor o igual a 30000$, tendra un 15% de descuento", () => {
         expect(calculadora(10, 3000, "AL")).toEqual(26700);
     });
+    it("Si no se ingresa un producto, el descuento por producto es igual a 0", () => {
+        expect(calculadora(10, 300, "UT")).toEqual(3049.5);
+    });
 });
