@@ -2,10 +2,10 @@ import descontar from "./descuento.js";
 import impuesto from "./impuesto.js";
 
 function calculadora(cantidad, precio, estado){
-    let precioneto, desc, imp;
-    precioneto = cantidad * precio
-    desc = descontar(precioneto) * precioneto;
-    imp = impuesto(estado) * precioneto;
-    return precioneto - desc + imp;
+    let precioNeto, descuentoAplicado, impuestoAplicado;
+    precioNeto = cantidad * precio
+    descuentoAplicado = descontar(precioNeto) * precioNeto;
+    impuestoAplicado = impuesto(estado) * precioNeto;
+    return precioNeto - descuentoAplicado + impuestoAplicado;
 };  
 export default calculadora;
