@@ -4,7 +4,7 @@ import impuesto from "./impuesto.js";
 
 const first = document.querySelector("#cantidad");
 const second = document.querySelector("#precio");
-const third = document.querySelector("#estado");
+const third = document.getElementById("estado");
 const form = document.querySelector("#calcular-form");
 const net = document.querySelector("#neto-div");
 const desc = document.querySelector("#descuento-div");

@@ -6,8 +6,14 @@
       <input type="number" id="cantidad" />
       <label for="precio">Precio unitario del ítem:</label>
       <input type="number" id="precio" />
-      <label for="precio">Código de estado:</label>
-      <input type="text" id="estado" />
+      <label for="estado">Código de estado:</label>
+      <select id="estado">
+        <option value="UT">UT</option>
+        <option value="NV">NV</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="CA">CA</option>
+    </select>
       <input type="submit" value="Calcular" id="calcular-button" />
     </form>
     <div id="neto-div"></div>
