@@ -37,6 +37,9 @@ function calculadora(cantidad, precio, estado){
     else if(precioneto>=10000 && precioneto<30000)
     {
         descuento = precioneto*0.1;
+    }else if(precioneto>=30000 )
+    {
+        descuento = precioneto*0.15;
     }
 
     return precioneto-descuento+impuesto;
