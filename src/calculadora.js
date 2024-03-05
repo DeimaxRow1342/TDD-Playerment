@@ -29,11 +29,15 @@ function calculadora(cantidad, precio, estado){
     else if(precioneto>=3000 && precioneto<7000)
     {
         descuento = precioneto*0.05;
-    }else if(precioneto>=7000 && precioneto<10000)
+    }
+    else if(precioneto>=7000 && precioneto<10000)
     {
         descuento = precioneto*0.07;
     }
-
+    else if(precioneto>=10000 && precioneto<30000)
+    {
+        descuento = precioneto*0.1;
+    }
 
     return precioneto-descuento+impuesto;
 };
