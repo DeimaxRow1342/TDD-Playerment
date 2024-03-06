@@ -53,7 +53,7 @@ describe("Determinar el precio total", () => {
         expect(calculadora(10, 300, "UT", "Electronicos")).toEqual(3139.5);
     });
     it("Si se ingresa el producto Vestimenta, se agrega un 0% de descuento al descuento total", () => {
-        expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3049.5);
+        expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3109.5);
     });
     it("Si se ingresa categoria alimentos, se tendra un impuesto del 0%", () => {
         expect(calculadora(10, 300, "UT", "Alimentos")).toEqual(2989.5);
@@ -69,5 +69,8 @@ describe("Determinar el precio total", () => {
     });
     it("Si se ingresa categoria electronicos, se tendra un impuesto del 4%", () => {
         expect(calculadora(10, 30, "UT", "Electronicos")).toEqual(328.95);
+    });
+    it("Si se ingresa categoria vestimenta, se tendra un impuesto del 2%", () => {
+        expect(calculadora(10, 30, "UT", "Vestimenta")).toEqual(325.95);
     });
 });

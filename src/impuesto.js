@@ -33,6 +33,8 @@ function impuesto(estado, producto){
         ImpuestoProducto = 0.03;
     }else if(producto=="Electronicos"){
         ImpuestoProducto = 0.04;
+    }else if(producto=="Vestimenta"){
+        ImpuestoProducto = 0.02;
     }
 
 
