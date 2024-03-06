@@ -55,7 +55,8 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa el producto Vestimenta, se agrega un 0% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3049.5);
     });
-    it("Si se ingresa el producto Varios, se agrega un 0% de descuento al descuento total", () => {
-        expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3049.5);
+    it("Si se ingresa categoria alimentos, se tendra un impuesto del 0%", () => {
+        expect(calculadora(10, 300, "UT", "Alimentos")).toEqual(2989.5);
     });
+   
 });
