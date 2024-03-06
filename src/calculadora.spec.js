@@ -47,7 +47,7 @@ describe("Determinar el precio total", () => {
         expect(calculadora(10, 300, "UT", "Escritorio")).toEqual(3004.5);
     });
     it("Si se ingresa el producto Muebles, se agrega un 0% de descuento al descuento total", () => {
-        expect(calculadora(10, 300, "UT", "Muebles")).toEqual(3049.5);
+        expect(calculadora(10, 300, "UT", "Muebles")).toEqual(3139.5);
     });
     it("Si se ingresa el producto Electronicos, se agrega un 1% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Electronicos")).toEqual(3019.5);
@@ -63,5 +63,8 @@ describe("Determinar el precio total", () => {
     });
     it("Si se ingresa categoria Material de escritorio, se tendra un impuesto del 0%", () => {
         expect(calculadora(10, 300, "UT", "Escritorio")).toEqual(3004.5);
+    });
+    it("Si se ingresa categoria muebles, se tendra un impuesto del 3%", () => {
+        expect(calculadora(10, 30, "UT", "Muebles")).toEqual(328.95);
     });
 });

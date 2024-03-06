@@ -28,6 +28,9 @@ function impuesto(estado, producto){
     else if(producto=="Bebidas")
     {
         ImpuestoProducto = 0.07;
+    }else if(producto=="Muebles")
+    {
+        ImpuestoProducto = 0.03;
     }
 
 
