@@ -61,4 +61,7 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa categoria Bebidas alcoholicas, se tendra un impuesto del 7%", () => {
         expect(calculadora(10, 300, "UT", "Bebidas")).toEqual(3259.5);
     });
+    it("Si se ingresa categoria Material de escritorio, se tendra un impuesto del 0%", () => {
+        expect(calculadora(10, 300, "UT", "Escritorio")).toEqual(3004.5);
+    });
 });
