@@ -43,4 +43,7 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa el producto Bebidas alcoholicas, se agrega un 0% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Bebidas")).toEqual(3049.5);
     });
+    it("Si se ingresa el producto Material de escritorio, se agrega un 1.5% de descuento al descuento total", () => {
+        expect(calculadora(10, 300, "UT", "Escritorio")).toEqual(3004.5);
+    });
 });
