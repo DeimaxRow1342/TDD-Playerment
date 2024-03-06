@@ -20,6 +20,11 @@ function descontar(precioNeto, producto){
     {
         descuentoPrecio = 0.15;
     } 
+
+    if(producto=="Alimentos"){
+        descuentoProducto = 0.02;
+    }
+
     descuentoTotal = descuentoPrecio + descuentoProducto;
     return descuentoTotal;
 }

@@ -37,4 +37,7 @@ describe("Determinar el precio total", () => {
     it("Si no se ingresa un producto, el descuento por producto es igual a 0", () => {
         expect(calculadora(10, 300, "UT")).toEqual(3049.5);
     });
+    it("Si se ingresa el producto Alimentos, se agrega un 2% de descuento al descuento total", () => {
+        expect(calculadora(10, 300, "UT", "Alimentos")).toEqual(2989.5);
+    });
 });
