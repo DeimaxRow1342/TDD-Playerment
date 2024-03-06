@@ -52,8 +52,10 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa el producto Electronicos, se agrega un 1% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Electronicos")).toEqual(3019.5);
     });
-    
     it("Si se ingresa el producto Vestimenta, se agrega un 0% de descuento al descuento total", () => {
+        expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3049.5);
+    });
+    it("Si se ingresa el producto Varios, se agrega un 0% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Vestimenta")).toEqual(3049.5);
     });
 });
