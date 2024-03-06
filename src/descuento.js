@@ -30,6 +30,9 @@ function descontar(precioNeto, producto){
     else if(producto=="Escritorio"){
         descuentoProducto = 0.015;
     }
+    else if(producto=="Electronicos"){
+        descuentoProducto = 0.01;
+    }
 
     descuentoTotal = descuentoPrecio + descuentoProducto;
     return descuentoTotal;
