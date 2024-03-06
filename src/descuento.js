@@ -24,6 +24,9 @@ function descontar(precioNeto, producto){
     if(producto=="Alimentos"){
         descuentoProducto = 0.02;
     }
+    else if(producto=="Bebidas"){
+        descuentoProducto = 0;
+    }
 
     descuentoTotal = descuentoPrecio + descuentoProducto;
     return descuentoTotal;
