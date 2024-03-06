@@ -73,4 +73,7 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa categoria vestimenta, se tendra un impuesto del 2%", () => {
         expect(calculadora(10, 30, "UT", "Vestimenta")).toEqual(325.95);
     });
+    it("Si se ingresa categoria varios, se tendra un impuesto del 0%", () => {
+        expect(calculadora(10, 30, "UT", "Varios")).toEqual(319.95);
+    });
 });

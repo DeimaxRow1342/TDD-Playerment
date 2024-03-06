@@ -21,7 +21,7 @@ function impuesto(estado, producto){
         Impuestoestado= 0.0825;
     }
 
-    if(producto=="Alimentos" || producto=="Escritorio")
+    if(producto=="Alimentos" || producto=="Escritorio" || producto=="Varios"  )
     {
         ImpuestoProducto = 0;
     } 
