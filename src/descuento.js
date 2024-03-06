@@ -24,7 +24,7 @@ function descontar(precioNeto, producto){
     if(producto=="Alimentos"){
         descuentoProducto = 0.02;
     }
-    else if(producto=="Bebidas"){
+    else if(producto=="Bebidas" || producto =="Muebles"){
         descuentoProducto = 0;
     }
     else if(producto=="Escritorio"){
