@@ -5,7 +5,7 @@ function calculadora(cantidad, precio, estado, producto){
     let precioNeto, descuentoAplicado, impuestoAplicado;
     precioNeto = cantidad * precio
     descuentoAplicado = descontar(precioNeto,producto) * precioNeto;
-    impuestoAplicado = impuesto(estado) * precioNeto;
+    impuestoAplicado = impuesto(estado, producto) * precioNeto;
     return precioNeto - descuentoAplicado + impuestoAplicado;
 };  
 export default calculadora;

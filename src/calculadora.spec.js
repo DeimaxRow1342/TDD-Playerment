@@ -41,7 +41,7 @@ describe("Determinar el precio total", () => {
         expect(calculadora(10, 300, "UT", "Alimentos")).toEqual(2989.5);
     });
     it("Si se ingresa el producto Bebidas alcoholicas, se agrega un 0% de descuento al descuento total", () => {
-        expect(calculadora(10, 300, "UT", "Bebidas")).toEqual(3049.5);
+        expect(calculadora(10, 300, "UT", "Bebidas")).toEqual(3259.5);
     });
     it("Si se ingresa el producto Material de escritorio, se agrega un 1.5% de descuento al descuento total", () => {
         expect(calculadora(10, 300, "UT", "Escritorio")).toEqual(3004.5);
@@ -58,5 +58,7 @@ describe("Determinar el precio total", () => {
     it("Si se ingresa categoria alimentos, se tendra un impuesto del 0%", () => {
         expect(calculadora(10, 300, "UT", "Alimentos")).toEqual(2989.5);
     });
-   
+    it("Si se ingresa categoria Bebidas alcoholicas, se tendra un impuesto del 7%", () => {
+        expect(calculadora(10, 300, "UT", "Bebidas")).toEqual(3259.5);
+    });
 });
