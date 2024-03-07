@@ -32,7 +32,7 @@ form.addEventListener("submit", (event) => {
     precioNeto.innerHTML = "<p> Precio neto (" + cantidadNumero + "*$" + precioNumero + "): $" + cantidadNumero*precioNumero + "</p>";
     descuentoAplicado.innerHTML = "<p> Descuento (" + descontar(cantidadNumero*precioNumero, productoCategoria)*100 + "%): $" + descontar(cantidadNumero*precioNumero, productoCategoria) * (cantidadNumero*precioNumero) + "</p>";
     impuestoAplicado.innerHTML = "<p> Impuesto para " + estadoTexto + " y " + productoCategoria + " (" + impuesto(estadoTexto, productoCategoria)*100 + "%): $" + impuesto(estadoTexto, productoCategoria)*(cantidadNumero*precioNumero) + "</p>";
-    precioEnvio.innerHTML = "<p> Precio envio total con descuento (" + descontarDeEnvio(tipoCliente)*100 + "%): $" + calcular_precio_envio(pesoV, cantidadNumero) + "</p>";
+    precioEnvio.innerHTML = "<p> Precio envio total con descuento (" + descontarDeEnvio(tipoCliente)*100 + "%): $" + calcular_precio_envio(pesoV, cantidadNumero, tipoCliente) + "</p>";
     div.innerHTML = "<p> Precio total (descuento e impuesto): $" + calculadora(cantidadNumero, precioNumero, estadoTexto, productoCategoria, pesoV, tipoCliente) + "</p>";
   }
   else{
