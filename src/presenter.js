@@ -15,7 +15,6 @@ const form = document.querySelector("#calcular-form");
 const precioNeto = document.querySelector("#neto-div");
 const descuentoAplicado = document.querySelector("#descuento-div");
 const impuestoAplicado = document.querySelector("#impuesto-div");
-const descuentoEnvio = document.querySelector("#descuentoenvio-div");
 const precioEnvio = document.querySelector("#precioenvio-div");
 const div = document.querySelector("#resultado-div");
 
@@ -30,12 +29,11 @@ form.addEventListener("submit", (event) => {
   const tipoCliente = cliente.value;
   
   if(validar(cantidadNumero, precioNumero, pesoV)){
-    precioNeto.innerHTML = "<p> Precio neto: (" + cantidadNumero + "*$" + precioNumero + "): $" + cantidadNumero*precioNumero + "</p>";
+    precioNeto.innerHTML = "<p> Precio neto (" + cantidadNumero + "*$" + precioNumero + "): $" + cantidadNumero*precioNumero + "</p>";
     descuentoAplicado.innerHTML = "<p> Descuento (" + descontar(cantidadNumero*precioNumero, productoCategoria)*100 + "%): $" + descontar(cantidadNumero*precioNumero, productoCategoria) * (cantidadNumero*precioNumero) + "</p>";
-    impuestoAplicado.innerHTML = "<p> Impuesto para " + estadoTexto + " (%" + impuesto(estadoTexto, productoCategoria)*100 + "): $" + impuesto(estadoTexto, productoCategoria)*(cantidadNumero*precioNumero) + "</p>";
-    descuentoEnvio.innerHTML = "<p> Descuento (" + descontarDeEnvio(tipoCliente) + "%): $" + pesoV * cantidadNumero * descontarDeEnvio(tipoCliente) + "</p>";
-    precioEnvio.innerHTML = "<p> Precio envio total: $" + calcular_precio_envio(pesoV, cantidadNumero) + "</p>";
-    div.innerHTML = "<p> Precio total(descuento e impuesto): $" + calculadora(cantidadNumero, precioNumero, estadoTexto, productoCategoria, pesoV, tipoCliente) + "</p>";
+    impuestoAplicado.innerHTML = "<p> Impuesto para " + estadoTexto + " y " + productoCategoria + " (" + impuesto(estadoTexto, productoCategoria)*100 + "%): $" + impuesto(estadoTexto, productoCategoria)*(cantidadNumero*precioNumero) + "</p>";
+    precioEnvio.innerHTML = "<p> Precio envio total con descuento (" + descontarDeEnvio(tipoCliente)*100 + "%): $" + calcular_precio_envio(pesoV, cantidadNumero) + "</p>";
+    div.innerHTML = "<p> Precio total (descuento e impuesto): $" + calculadora(cantidadNumero, precioNumero, estadoTexto, productoCategoria, pesoV, tipoCliente) + "</p>";
   }
   else{
     alert("Revisa que los campos numericos sean mayores a 0");
