@@ -4,12 +4,13 @@ import calcular_precio_envio from "./precio_envio.js";
 import descontarEspecifico from "./descuento_especial.js";
 
 function calculadora(cantidad, precio, estado, producto, peso, cliente){
-    let precioNeto, descuentoAplicado, impuestoAplicado, precioEnvio, descuentoEspecial;
+    let precioNeto, descuentoAplicado, impuestoAplicado, precioEnvio, descuentoEspecial, precioConDescuento;
     precioNeto = cantidad * precio;
     descuentoAplicado = descontar(precioNeto,producto) * precioNeto;
-    impuestoAplicado = impuesto(estado, producto) * precioNeto;
-    precioEnvio = calcular_precio_envio(peso, cantidad, cliente);
     descuentoEspecial = descontarEspecifico(cliente, precioNeto, producto);
-    return precioNeto - descuentoAplicado - descuentoEspecial + impuestoAplicado + precioEnvio;
+    precioConDescuento = precioNeto - descuentoAplicado - descuentoEspecial;
+    impuestoAplicado = impuesto(estado, producto) * precioConDescuento;
+    precioEnvio = calcular_precio_envio(peso, cantidad, cliente);
+    return precioConDescuento + impuestoAplicado + precioEnvio;
 };  
 export default calculadora;
