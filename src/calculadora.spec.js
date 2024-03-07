@@ -83,21 +83,24 @@ describe("Determinar el precio total", () => {
         expect(calculadora(10, 30, "UT", "Varios",5)).toEqual(319.95);
     });
     it("Cuando el peso volumetrico este entre 11-20 , se tendra un costo de envio por unidad de 3.5$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",12)).toEqual(354.95);
+        expect(calculadora(10, 30, "UT", "Varios", 12)).toEqual(354.95);
     });
     it("Cuando el peso volumetrico este entre 21-40 , se tendra un costo de envio por unidad de 5$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",35)).toEqual(369.95);
+        expect(calculadora(10, 30, "UT", "Varios", 35)).toEqual(369.95);
     });
     it("Cuando el peso volumetrico este entre 41-80 , se tendra un costo de envio por unidad de 6$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",80)).toEqual(379.95);
+        expect(calculadora(10, 30, "UT", "Varios", 80)).toEqual(379.95);
     });
     it("Cuando el peso volumetrico este entre 80-100 , se tendra un costo de envio por unidad de 6.5$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",100)).toEqual(384.95);
+        expect(calculadora(10, 30, "UT", "Varios", 100)).toEqual(384.95);
     });
     it("Cuando el peso volumetrico este entre 100-200 , se tendra un costo de envio por unidad de 8$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",101)).toEqual(399.95);
+        expect(calculadora(10, 30, "UT", "Varios", 101)).toEqual(399.95);
     });
     it("Cuando el peso volumetrico es mayor a 200 , se tendra un costo de envio por unidad de 9$", () => {
-        expect(calculadora(10, 30, "UT", "Varios",201)).toEqual(409.95);
+        expect(calculadora(10, 30, "UT", "Varios", 201)).toEqual(409.95);
+    });
+    it("Por defecto el tipo de cliente es normal, por lo que el descuento al costo de envio es de 0%", () => {
+        expect(calculadora(10, 30, "UT", "Varios", 201)).toEqual(409.95);
     });
 });

@@ -1,3 +1,5 @@
+import descontarDeEnvio from "./descuento_envio";
+
 function calcular_precio_envio(Pesovolumetrico, cantidad){
     let Precio_envio_total=0;
     if(Pesovolumetrico>=11 && Pesovolumetrico<=20)
@@ -22,6 +24,6 @@ function calcular_precio_envio(Pesovolumetrico, cantidad){
         Precio_envio_total = cantidad*9;
     }
 
-    return Precio_envio_total;
+    return Precio_envio_total + (Precio_envio_total*descontarDeEnvio());
 }
 export default calcular_precio_envio;
