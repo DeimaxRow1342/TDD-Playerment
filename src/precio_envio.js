@@ -4,9 +4,13 @@ function calcular_precio_envio(Pesovolumetrico, cantidad){
     {
         Precio_envio_total = cantidad*3.5;
     }
-    if(Pesovolumetrico>=21 && Pesovolumetrico<=40)
+    else if(Pesovolumetrico>20 && Pesovolumetrico<=40)
     {
         Precio_envio_total = cantidad*5;
+    }
+    else if(Pesovolumetrico>40 && Pesovolumetrico<=80)
+    {
+        Precio_envio_total = cantidad*6;
     }
     return Precio_envio_total;
 }

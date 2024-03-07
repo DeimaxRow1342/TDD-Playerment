@@ -88,4 +88,7 @@ describe("Determinar el precio total", () => {
     it("Cuando el peso volumetrico este entre 21-40 , se tendra un costo de envio por unidad de 5$", () => {
         expect(calculadora(10, 30, "UT", "Varios",35)).toEqual(369.95);
     });
+    it("Cuando el peso volumetrico este entre 41-80 , se tendra un costo de envio por unidad de 6$", () => {
+        expect(calculadora(10, 30, "UT", "Varios",80)).toEqual(379.95);
+    });
 });
