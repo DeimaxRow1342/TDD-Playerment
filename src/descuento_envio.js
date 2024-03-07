@@ -1,7 +1,8 @@
 function descontarDeEnvio(cliente){
     if(cliente=="Normal"){
         return 0;
+    }else if(cliente=="Recurrente"){
+        return 0.005;
     }
-    return 0;
 }
 export default descontarDeEnvio;
