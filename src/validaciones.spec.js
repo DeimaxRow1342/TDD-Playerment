@@ -10,4 +10,7 @@ describe("Validar los campos de numeros", () => {
     it("El sistema deniega la ejecucion si el precio por item es igual o menor a 0", () => {
         expect(validar(4, -2)).toEqual(false);
     });
+    it("El sistema deniega la ejecucion si el precio por item es igual o menor a 0", () => {
+        expect(validar(4, 100, -10)).toEqual(false);
+    });
 });
