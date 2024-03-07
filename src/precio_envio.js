@@ -1,7 +1,7 @@
 import descontarDeEnvio from "./descuento_envio";
 
 function calcular_precio_envio(pesoVolumetrico, cantidad, cliente){
-    let Precio_envio_total=0;
+    let Precio_envio_total=0, Descuento_envio=0;
 
     if(pesoVolumetrico>=11 && pesoVolumetrico<=20)
     {
@@ -25,6 +25,8 @@ function calcular_precio_envio(pesoVolumetrico, cantidad, cliente){
         Precio_envio_total = cantidad*9;
     }
 
-    return Precio_envio_total - (Precio_envio_total*descontarDeEnvio(cliente));
+    Descuento_envio = Precio_envio_total*descontarDeEnvio(cliente);
+
+    return Precio_envio_total - Descuento_envio;
 }
 export default calcular_precio_envio;

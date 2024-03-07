@@ -106,4 +106,16 @@ describe("Determinar el precio total", () => {
     it("Si el tipo de cliente es normal, el descuento al costo de envio es de 0%", () => {
         expect(calculadora(10, 30, "UT", "Varios", 201, "Normal")).toEqual(409.95);
     });
+    it("Si el tipo de cliente es recurrente, el descuento al costo de envio es de 0.5%", () => {
+        expect(calculadora(10, 30, "UT", "Varios", 201, "Recurrente")).toEqual(409.5);
+    });
+    it("Si el tipo de cliente es antiguo recurrente, el descuento al costo de envio es de 1%", () => {
+        expect(calculadora(10, 30, "UT", "Varios", 201, "Antiguo")).toEqual(409.04999999999995);
+    });
+    it("Si el tipo de cliente es especial, el descuento al costo de envio es de 1.5%", () => {
+        expect(calculadora(10, 30, "UT", "Varios", 201, "Especial")).toEqual(408.6);
+    });
+    it("Si el tipo de cliente es recurrente y compra de la categoria de productos de alimentos por un precio neto mayor a 3000, obtiene un descuendo de $100", () => {
+        expect(calculadora(100, 40, "UT", "Alimentos", 201, "Recurrente")).toEqual(4781.5);
+    });
 });

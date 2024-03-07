@@ -8,5 +8,6 @@ function descontarDeEnvio(cliente){
     }else if(cliente=="Especial"){
         return 0.015;
     }
+    return 0;
 }
 export default descontarDeEnvio;
