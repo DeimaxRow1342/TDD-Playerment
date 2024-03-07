@@ -6,10 +6,12 @@ const cantidad = document.querySelector("#cantidad");
 const precio = document.querySelector("#precio");
 const estado = document.getElementById("estado");
 const producto = document.getElementById("producto");
+const Pesovolumetrico = document.getElementById("#PesoVolumetrico");
 const form = document.querySelector("#calcular-form");
 const precioNeto = document.querySelector("#neto-div");
 const descuentoAplicado = document.querySelector("#descuento-div");
 const impuestoAplicado = document.querySelector("#impuesto-div");
+const Preciodiv = document.querySelector("#precioenvio-div");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
@@ -19,9 +21,11 @@ form.addEventListener("submit", (event) => {
   const precioNumero = Number.parseInt(precio.value);
   const estadoTexto = estado.value;
   const productoCategoria = producto.value;
+  
 
   precioNeto.innerHTML = "<p> Precio neto: (" + cantidadNumero + "*$" + precioNumero + "): $" + cantidadNumero*precioNumero + "</p>";
   descuentoAplicado.innerHTML = "<p> Descuento (" + descontar(cantidadNumero*precioNumero, productoCategoria)*100 + "%): $" + descontar(cantidadNumero*precioNumero, productoCategoria) * (cantidadNumero*precioNumero) + "</p>";
   impuestoAplicado.innerHTML = "<p> Impuesto para " + estadoTexto + " (%" + impuesto(estadoTexto, productoCategoria)*100 + "): $" + impuesto(estadoTexto, productoCategoria)*(cantidadNumero*precioNumero) + "</p>";
+  Preciodiv.innerHTML = "<p> Precio de envio total: $ 0" + "</p>";
   div.innerHTML = "<p> Precio total(descuento e impuesto): $" + calculadora(cantidadNumero, precioNumero, estadoTexto, productoCategoria) + "</p>";
 });
