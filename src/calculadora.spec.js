@@ -103,4 +103,7 @@ describe("Determinar el precio total", () => {
     it("Por defecto el tipo de cliente es normal, por lo que el descuento al costo de envio es de 0%", () => {
         expect(calculadora(10, 30, "UT", "Varios", 201)).toEqual(409.95);
     });
+    it("Si el tipo de cliente es normal, el descuento al costo de envio es de 0%", () => {
+        expect(calculadora(10, 30, "UT", "Varios", 201, "Normal")).toEqual(409.95);
+    });
 });
