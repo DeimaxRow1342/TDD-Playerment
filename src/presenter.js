@@ -29,7 +29,7 @@ form.addEventListener("submit", (event) => {
   const productoCategoria = producto.value;
   const tipoCliente = cliente.value;
   
-  if(validar(cantidadNumero)){
+  if(validar(cantidadNumero, precioNumero)){
     precioNeto.innerHTML = "<p> Precio neto: (" + cantidadNumero + "*$" + precioNumero + "): $" + cantidadNumero*precioNumero + "</p>";
     descuentoAplicado.innerHTML = "<p> Descuento (" + descontar(cantidadNumero*precioNumero, productoCategoria)*100 + "%): $" + descontar(cantidadNumero*precioNumero, productoCategoria) * (cantidadNumero*precioNumero) + "</p>";
     impuestoAplicado.innerHTML = "<p> Impuesto para " + estadoTexto + " (%" + impuesto(estadoTexto, productoCategoria)*100 + "): $" + impuesto(estadoTexto, productoCategoria)*(cantidadNumero*precioNumero) + "</p>";
