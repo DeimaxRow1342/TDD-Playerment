@@ -1,14 +1,23 @@
-import sumar from "./sumador";
-var app = {};
+fetch("pruebasTDD.json")
 
-var callback = function(datos){
-  console.log(datos);
-};
+.then(function(response){
+  return Response.json();
+})
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
-const div = document.querySelector("#resultado-div");
+.then(function(practicas){
+  let placeholder = document.querySelector("#tabla-practicas");
+  
+  let salida = "";
+
+  for(let practica of practicas){
+    salida += `<tr> 
+                <td>${practica.Nombre}</td>
+                <td>${practica.Descripcion}</td>
+                <td>${practica.Fecha}</td>
+                <td>a${practica.Enlace}</td>
+              </tr>`;
+  }
+})
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
