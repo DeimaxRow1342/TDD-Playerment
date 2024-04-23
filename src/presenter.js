@@ -1,4 +1,9 @@
 import sumar from "./sumador";
+var app = {};
+
+var callback = function(datos){
+  console.log(datos);
+};
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
