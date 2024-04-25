@@ -51,7 +51,7 @@ import Practicas from "./datosPracticas.js";
 
 let nombres = ["FizzBuzz", "Totalizador"];
 let descripciones = ["Una practica de TDD donde se retorna una cadena de Fizz, Buzz o FizzBuzz de acuerdo a ciertas reglas", "Una practica de TDD donde se realiza un totalizador que calcula el precio total de una cantidad de productos aplicando ciertos impuestos y descuentos"];
-let fechas = ["20/02/2024","24/3/2024"];
+let fechas = ["2024-02-20","2024-03-24"];
 let enlaces = ["https://github.com/DeimaxRow1342/SecuenciaFizzBuzz", "https://github.com/Dylancalle/Tarea7"];
 let practicas = [];
 
@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const fecha = document.getElementById("fecha").value.toString();
     const enlace = document.getElementById("enlace").value.toString();
 
-    const nuevaPractica = new Practicas(nombre, descripcion, fecha, enlace);
+    const nuevaPractica = new Practicas();
+    nuevaPractica.cargarDatos(nombre, descripcion, fecha, enlace);
     practicas.push(nuevaPractica);
 
     this.reset();
