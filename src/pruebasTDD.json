@@ -1,12 +1,14 @@
-[{
-    "Nombre":"FizzBuzz",
-    "Descripcion":"Una practica de TDD donde se retorna una cadena de Fizz, Buzz o FizzBuzz de acuerdo a ciertas reglas",
-    "Fecha":"20/02/2024",
-    "Enlace":"https://github.com/DeimaxRow1342/SecuenciaFizzBuzz"
-},
-{
-    "Nombre":"Totalizador",
-    "Descripcion":"Una practica de TDD donde se realiza un totalizador que calcula el precio total de una cantidad de productos aplicando ciertos impuestos y descuentos",
-    "Fecha":"24/3/2024",
-    "Enlace":"https://github.com/Dylancalle/Tarea7"
-}]
+[
+    {
+        "nombre": "FizzBuzz",
+        "descripcion": "Una practica de TDD donde se retorna una cadena de Fizz, Buzz o FizzBuzz de acuerdo a ciertas reglas",
+        "fecha": "20/02/2024",
+        "enlace": "https://github.com/DeimaxRow1342/SecuenciaFizzBuzz"
+    },
+    {
+        "nombre": "Totalizador",
+        "descripcion": "Una practica de TDD donde se realiza un totalizador que calcula el precio total de una cantidad de productos aplicando ciertos impuestos y descuentos",
+        "fecha": "24/3/2024",
+        "enlace": "https://github.com/Dylancalle/Tarea7"
+    }
+]
