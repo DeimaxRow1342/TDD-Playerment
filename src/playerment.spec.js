@@ -21,4 +21,19 @@ describe("Crear un programa gamificado para TDDLab", () => {
         practica.cargarDatos("FizzBuzz", "Una practica de TDD donde se retorna una cadena de Fizz, Buzz o FizzBuzz de acuerdo a ciertas reglas","20/02/2024", "https://github.com/DeimaxRow1342/SecuenciaFizzBuzz");
         expect(practica.enlace).toEqual("https://github.com/DeimaxRow1342/SecuenciaFizzBuzz");
     });
+
+    it("Si ingreso el nombre de una práctica y luego la busco, debería regresar la práctica", () => {
+        const practica = new Practicas();
+        practica.cargarDatos("FizzBuzz");
+        expect(practica.obtenerPractica("FizzBuzz")).toEqual(practica);
+    });
+
+    //eliminar
+
+    it("Si ingreso el nombre de una práctica y luego la elimino, debería ser nula", () => {
+        const practica = new Practicas();
+        practica.cargarDatos("FizzBuzz");
+        practica.eliminarDatos("FizzBuzz");
+        expect(practica.obtenerPractica("FizzBuzz")).toBeUndefined(); 
+    });
 });
