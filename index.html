@@ -5,6 +5,7 @@
     <title>TDD Playerment</title>
   </head>
   <body>
+<<<<<<< HEAD
     <h1>TDD Playerment</h1>
     
     <table>
@@ -36,6 +37,49 @@
       
       <input type="submit"/>
     </form>
+=======
+    <h1>Totalizador</h1>
+    <form id="calcular-form">
+      <label for="cantidad">Cantidad de ítems:</label>
+      <input type="number" id="cantidad" />
+      <label for="precio">Precio unitario del ítem:</label>
+      <input type="number" id="precio" />
+      <label for="PesoVolumetrico">Peso volumetrico por item:</label>
+      <input type="number" id="PesoVolumetrico" />
+      <label for="cliente">Tipo de cliente:</label>
+      <select id="cliente">
+        <option value="Normal">Normal</option>
+        <option value="Recurrente">Recurrente</option>
+        <option value="Antiguo">Antiguo Recurrente</option>
+        <option value="Especial">Especial</option>
+    </select>
+      <label for="estado">Código de estado:</label>
+      <select id="estado">
+        <option value="UT">UT</option>
+        <option value="NV">NV</option>
+        <option value="TX">TX</option>
+        <option value="AL">AL</option>
+        <option value="CA">CA</option>
+    </select>
+    <label for="producto">Categoría de producto:</label>
+      <select id="producto">
+        <option value="Alimentos">Alimentos</option>
+        <option value="Bebidas">Bebidas alcohólicas</option>
+        <option value="Escritorio">Material de escritorio</option>
+        <option value="Muebles">Muebles</option>
+        <option value="Electronicos">Electrónicos</option>
+        <option value="Vestimenta">Vestimenta</option>
+        <option value="Varios">Varios</option>
+    </select>
+      
+      <input type="submit" value="Calcular" id="calcular-button" />
+    </form>
+    <div id="neto-div"></div>
+    <div id="descuento-div"></div>
+    <div id="impuesto-div"></div>
+    <div id="precioenvio-div"></div>
+    <div id="resultado-div"></div>
+>>>>>>> c1d7b35d8134c5bd241e9877e8d5d10055b4e3ad
 
     <script type="module" src="./src/presenter.js"></script>
   </body>
